@@ -7,5 +7,7 @@ pip install requests
 ```
 
 Ensure that both files are saved in the same location.
+
 First run scraperSetUp.py, it will ask for the set code.
+
 This will then create a new file using mtg_cardPull.py, which will then download a csv with all the cards, tokens and promo cards.
