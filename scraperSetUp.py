@@ -4,21 +4,21 @@ def scraperSetUp():
     #Sets up the loop
     while True:
         #Asks for the set code
-        setInput = input("What is the set code for the set? - ")
+        set_input = input("What is the set code for the set? - ")
         #Opens the base file and creates a new file using the set name
         f1 = open('mtg_cardPull.py', 'r')
-        f2 = open(setInput + '_cardPull.py', 'w')
+        f2 = open(set_input + '_cardPull.py', 'w')
         for line in f1:
-            f2.write(line.replace('abc', setInput))
+            f2.write(line.replace('abc', set_input))
         f1.close()
         f2.close()
-        createdFile = setInput + '_cardPull'
+        created_file = set_input + '_cardPull'
         #Runs the created file
-        DataScraper = __import__(createdFile)
-        DataScraper.main()
+        data_scraper = __import__(created_file)
+        data_scraper.main()
         #Asks is there is another set that needs to be scraped
-        another_set = input("Do you have another set you need to download? (Y/N) ")
-        if another_set =="y":
+        another_set = input("Do you have another set you need to download? (y/n) ")
+        if another_set.lower() =="y":
             continue
         else:
             break
