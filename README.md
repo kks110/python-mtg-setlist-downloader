@@ -1,4 +1,4 @@
-# python-mtg-setlist-downloader
+# python-mtg-set-list-downloader
 Enter a set name and download a list of cards for the set.
 
 Requests is required for this to run. Install with pip:
