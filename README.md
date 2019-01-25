@@ -3,7 +3,7 @@ Enter a set name and download a list of cards for the set.
 
 Requests is required for this to run. Install with pip:
 ```
-pip install requests
+py -m pip install requests
 ```
 
 Ensure that both files are saved in the same location.
