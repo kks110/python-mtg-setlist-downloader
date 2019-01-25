@@ -15,12 +15,12 @@ def write_file(set_json, set_count, inc_prerelease, set_type="0"):
             writer.writerow(["Tokens"])
         elif set_type == "p":
             writer.writerow(["Promos"])
-        for Counter in range(set_count):
+        for x in range(set_count):
             #Prints the data out on screen and also puts it in to the CSV file
-            card_name = set_json['data'][Counter]['name']
-            rarity = set_json['data'][Counter]['rarity']
-            colour = set_json['data'][Counter]['color_identity']
-            collector_number = set_json['data'][Counter]['collector_number']
+            card_name = set_json['data'][x]['name']
+            rarity = set_json['data'][x]['rarity']
+            colour = set_json['data'][x]['color_identity']
+            collector_number = set_json['data'][x]['collector_number']
             if inc_prerelease:
                 writer.writerow([collector_number, card_name, colour, rarity])
             else:
